@@ -1,24 +1,60 @@
-# README
+```
+singular user
+{
+  data: {
+     "id": string,
+     "type": user,
+       attributes: {
+         "first_name": string,
+         "last_name": string,
+         "password": string,
+         "email": string,
+         "is_covid_vaccinated": boolean
+         "children": [
+          {
+            "id": string,
+            "type": child,
+            "attributes": {
+              "first_name": string,
+              "last_name": string,
+              "birthday": string
+            }
+          },
+         ]
+         "villages": [
+          {
+            "id": string,
+            "type": "village",
+            "attributes": {
+              name: string
+            }
+          },
+         ]
+    }
+  }
+}
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+singular village
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+{
+  data: {
+    "id": string,
+    "type": village,
+    "attributes": {
+      "name": string,
+      "events": [
+        {
+          "id": string,
+          "type": event,
+          "attributes": {
+            "name": string,
+            "date": string,
+            "description": string,
+            "time": string,
+            "adult_required": boolean 
+          }
+        }
+      ]    
+    }    
+  }
+}
