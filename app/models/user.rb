@@ -7,5 +7,5 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :address, presence: true
   validates :covid_vaccinated, presence: true
-  validates :volunteer_credits
+  validates :volunteer_credits, presence: true
 end
