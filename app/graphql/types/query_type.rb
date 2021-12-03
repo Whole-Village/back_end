@@ -9,12 +9,8 @@ module Types
       argument :email, String, required: true
     end
 
-    # def fetch_users
-    #   User.all.order(created_at: :desc)
-    # end
-
     def fetch_user(email:)
-      User.find_by(email)
+      User.find_by(email: email)
     end
 
     # TODO: remove me
