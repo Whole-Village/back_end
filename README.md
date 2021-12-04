@@ -7,9 +7,12 @@ singular user
        attributes: {
          "first_name": string,
          "last_name": string,
-         "password": string,
          "email": string,
-         "is_covid_vaccinated": boolean
+         "password": string,
+         "phone_number": string,
+         "address": string,
+         "covid_vaccinated": boolean,
+         "volunteer_credits": string, 
          "children": [
           {
             "id": string,
