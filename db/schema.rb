@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_233746) do
+ActiveRecord::Schema.define(version: 2021_12_05_021203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "children", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "birthdate"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_children_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "date"
+    t.string "description"
+    t.string "time"
+    t.boolean "adult_required"
+    t.string "images"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -28,4 +49,33 @@ ActiveRecord::Schema.define(version: 2021_12_02_233746) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "village_events", force: :cascade do |t|
+    t.bigint "village_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_village_events_on_event_id"
+    t.index ["village_id"], name: "index_village_events_on_village_id"
+  end
+
+  create_table "village_members", force: :cascade do |t|
+    t.bigint "village_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_village_members_on_user_id"
+    t.index ["village_id"], name: "index_village_members_on_village_id"
+  end
+
+  create_table "villages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "children", "users"
+  add_foreign_key "village_events", "events"
+  add_foreign_key "village_events", "villages"
+  add_foreign_key "village_members", "users"
+  add_foreign_key "village_members", "villages"
 end
