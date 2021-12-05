@@ -1,3 +1,7 @@
+## Schema 
+
+[whole_village_schema.pdf](https://github.com/Whole-Village/back_end/files/7656851/whole_village_schema.pdf)
+
 ```
 singular user
 {
