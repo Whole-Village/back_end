@@ -4,8 +4,7 @@ RSpec.describe Village, type: :model do
   describe 'relationships' do
     it { should have_many(:village_members) }
     it { should have_many(:users).through(:village_members) }
-    it { should have_many(:village_events) }
-    it { should have_many(:events).through(:village_events) }
+    it { should have_many(:events) }
   end
 
   describe 'validations' do
