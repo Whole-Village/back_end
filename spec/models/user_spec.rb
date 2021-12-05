@@ -13,7 +13,6 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of(:email) }
     it { should validate_presence_of(:phone_number) }
     it { should validate_presence_of(:address) }
-    it { should validate_presence_of(:covid_vaccinated) }
     it { should validate_presence_of(:volunteer_credits) }
   end
 
