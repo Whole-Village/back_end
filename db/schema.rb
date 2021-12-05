@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_05_021203) do
+ActiveRecord::Schema.define(version: 2021_12_05_212830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2021_12_05_021203) do
     t.string "images"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "village_id"
+    t.index ["village_id"], name: "index_events_on_village_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,15 +51,6 @@ ActiveRecord::Schema.define(version: 2021_12_05_021203) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "village_events", force: :cascade do |t|
-    t.bigint "village_id", null: false
-    t.bigint "event_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["event_id"], name: "index_village_events_on_event_id"
-    t.index ["village_id"], name: "index_village_events_on_village_id"
-  end
-
   create_table "village_members", force: :cascade do |t|
     t.bigint "village_id", null: false
     t.bigint "user_id", null: false
@@ -71,11 +64,11 @@ ActiveRecord::Schema.define(version: 2021_12_05_021203) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "description"
   end
 
   add_foreign_key "children", "users"
-  add_foreign_key "village_events", "events"
-  add_foreign_key "village_events", "villages"
+  add_foreign_key "events", "villages"
   add_foreign_key "village_members", "users"
   add_foreign_key "village_members", "villages"
 end
