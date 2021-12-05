@@ -6,7 +6,9 @@ RSpec.describe Child, type: :model do
   end
 
   describe 'validations' do
-
+    it { should validate_presence_of(:first_name) }
+    it { should validate_presence_of(:last_name) }
+    it { should validate_presence_of(:birthdate) }
   end
 
   describe 'class methods' do
@@ -15,5 +17,5 @@ RSpec.describe Child, type: :model do
 
   describe 'instance methods' do
 
-  end 
+  end
 end
