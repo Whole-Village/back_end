@@ -20,7 +20,7 @@ module Types
     end
 
     field :village, Types::VillageType, null: false do
-      argument :id, String, required: true
+      argument :id, ID, required: true
     end
 
     def village(id:)
