@@ -18,5 +18,13 @@ module Types
     def user(email:)
       User.find_by(email: email)
     end
+
+    field :village, Types::VillageType, null: false do
+      argument :id, String, required: true
+    end
+
+    def village(id:)
+      Village.find(id)
+    end
   end
 end
