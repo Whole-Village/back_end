@@ -1,7 +1,5 @@
 class Event < ApplicationRecord
-  has_many :village_events, dependent: :destroy
-  has_many :villages, through: :village_events
-
+  belongs_to :village
   validates :name, presence: true
   validates :date, presence: true
   validates :description, presence: true

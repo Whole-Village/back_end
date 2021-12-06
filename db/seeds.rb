@@ -8,7 +8,6 @@
 User.destroy_all
 Child.destroy_all
 VillageMember.destroy_all
-VillageEvent.destroy_all
 Event.destroy_all
 Village.destroy_all
 
@@ -76,9 +75,5 @@ event1 = Event.create(
   description: 'come throw down for Andrew',
   time: '04:30',
   adult_required: false,
-)
-
-ve1 = VillageEvent.create(
-  village: village1,
-  event: event1
+  village: village1
 )

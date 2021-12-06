@@ -1,4 +1,5 @@
 class Mutations::CreateUser < Mutations::BaseMutation
+  argument :id, ID, required: false
   argument :first_name, String, required: true
   argument :last_name, String, required: true
   argument :email, String, required: true
@@ -9,7 +10,7 @@ class Mutations::CreateUser < Mutations::BaseMutation
   argument :volunteer_credits, String, required: true
 
   field :user, Types::UserType, null: true
-  field :errors, [String], null: false
+  field :errors, [String], null: true
 
   def resolve(first_name:,
               last_name:,

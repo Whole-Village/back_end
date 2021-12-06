@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
   describe 'relationships' do
-    it { should have_many(:village_events) }
-    it { should have_many(:villages).through(:village_events) }
+    it { should belong_to(:village) }
   end
 
   describe 'validations' do
