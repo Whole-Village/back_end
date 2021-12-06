@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Whole-Village/back_end/tree/main.svg?style=shield)](https://circleci.com/gh/Whole-Village/back_end/tree/main)
+
 ## Schema 
 
 [whole_village_schema.pdf](https://github.com/Whole-Village/back_end/files/7656851/whole_village_schema.pdf)
