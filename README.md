@@ -2,7 +2,7 @@
 
 ## Schema 
 
-[whole_village_schema.pdf](https://github.com/Whole-Village/back_end/files/7656851/whole_village_schema.pdf)
+![Screen Shot 2021-12-06 at 3 38 10 PM](https://user-images.githubusercontent.com/75844153/144918858-dcb64929-7f83-4022-b247-edcaf25240f3.png)
 
 ```
 singular user
