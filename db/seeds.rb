@@ -56,7 +56,18 @@ natalie = Child.create(
 )
 
 village1 = Village.create(
-  name: 'Soccer team'
+  name: 'Soccer team',
+  description: 'Elementary school team for kids under eight. Coached by Ed Edwards'
+)
+
+village2 = Village.create(
+  name: 'Ms. Stewart 3rd Grade class',
+  description: 'All students taught by Ms. Stewart at Main St. Elementary'
+)
+
+village3 = Village.create(
+  name: 'Selwyn Village Neighborhood Kids',
+  description: 'Group for all children living in Selwyn Village Neighborhood'
 )
 
 vm1 = VillageMember.create(
@@ -69,6 +80,21 @@ vm2 = VillageMember.create(
   user: amber
 )
 
+vm3 = VillageMember.create(
+  village: village2,
+  user: priya
+)
+
+vm3 = VillageMember.create(
+  village: village3,
+  user: priya
+)
+
+vm3 = VillageMember.create(
+  village: village3,
+  user: priya
+)
+
 event1 = Event.create(
   name: 'Andrews birthday bash',
   date: '03/06/1998',
@@ -76,4 +102,28 @@ event1 = Event.create(
   time: '04:30',
   adult_required: false,
   village: village1
+)
+event2 = Event.create(
+  name: 'Phils birthday bash',
+  date: '03/21/1988',
+  description: 'come throw down for Phil',
+  time: '04:30',
+  adult_required: false,
+  village: village2
+)
+event1 = Event.create(
+  name: 'Christmas Carrols',
+  date: '12/25/2021',
+  description: 'Spread cheer through the neighborhood',
+  time: '04:30',
+  adult_required: true,
+  village: village3
+)
+event1 = Event.create(
+  name: 'Easter Egg Hunt',
+  date: '04/25/2022',
+  description: 'Lets see who can find the most',
+  time: '04:30',
+  adult_required: true,
+  village: village2
 )
