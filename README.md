@@ -4,7 +4,23 @@
 
 ![Screen Shot 2021-12-06 at 3 38 10 PM](https://user-images.githubusercontent.com/75844153/144918858-dcb64929-7f83-4022-b247-edcaf25240f3.png)
 
+
+## GraphQL Queries
+
+### Find all events in a village
+
+ ```query {
+  events(villageId: <villageId>) {
+    name
+    description
+    date
+    time
+    adultRequired
+    villageName
+  }
+}
 ```
+
 singular user
 {
   data: {
