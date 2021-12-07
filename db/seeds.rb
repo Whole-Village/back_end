@@ -56,7 +56,8 @@ natalie = Child.create(
 )
 
 village1 = Village.create(
-  name: 'Soccer team'
+  name: 'Soccer team',
+  description: 'Pre-K Willow soccer team in Lalaland'
 )
 
 vm1 = VillageMember.create(
