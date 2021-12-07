@@ -56,7 +56,7 @@ natalie = Child.create(
 )
 
 village1 = Village.create(
-  name: 'Soccer team,
+  name: 'Soccer team',
   description: 'Elementary school team for kids under eight. Coached by Ed Edwards'
 )
 
