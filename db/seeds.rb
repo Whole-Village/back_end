@@ -21,6 +21,7 @@ donna =  User.create(first_name: 'Donna',
               covid_vaccinated: true,
               volunteer_credits: 0
                )
+
 amber = User.create(first_name: 'Amber',
               last_name: 'Apollo',
               email: 'amber@gmail.com',
@@ -95,7 +96,7 @@ vm3 = VillageMember.create(
   user: priya
 )
 
-event1 = Event.create(
+ birthday = Event.create(
   name: 'Andrews birthday bash',
   date: '03/06/1998',
   description: 'come throw down for Andrew',
@@ -103,15 +104,15 @@ event1 = Event.create(
   adult_required: false,
   village: village1
 )
-event2 = Event.create(
-  name: 'Phils birthday bash',
-  date: '03/21/1988',
-  description: 'come throw down for Phil',
+valentine = Event.create(
+  name: "Valentine's",
+  date: '02/14/2022',
+  description: 'come celebrate the big V day with Phil',
   time: '04:30',
   adult_required: false,
   village: village2
 )
-event1 = Event.create(
+carrols = Event.create(
   name: 'Christmas Carrols',
   date: '12/25/2021',
   description: 'Spread cheer through the neighborhood',
@@ -119,7 +120,7 @@ event1 = Event.create(
   adult_required: true,
   village: village3
 )
-event1 = Event.create(
+easter = Event.create(
   name: 'Easter Egg Hunt',
   date: '04/25/2022',
   description: 'Lets see who can find the most',
