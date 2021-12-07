@@ -4,4 +4,5 @@ class Village < ApplicationRecord
   has_many :users, through: :village_members
 
   validates :name, presence: true
+  validates :description, presence: true
 end
