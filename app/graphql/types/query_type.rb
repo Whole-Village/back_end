@@ -8,4 +8,5 @@ class Types::QueryType < Types::BaseObject
   field :event, resolver: Queries::Event
   field :village, resolver: Queries::Village
   field :children, resolver: Queries::Children
+  field :child, resolver: Queries::Child
 end
