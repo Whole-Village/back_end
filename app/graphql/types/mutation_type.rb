@@ -9,4 +9,5 @@ class Types::MutationType < Types::BaseObject
   field :update_event, mutation: Mutations::Events::UpdateEvent
 
   field :create_child, mutation: Mutations::Children::CreateChild
+  field :update_child, mutation: Mutations::Children::UpdateChild
 end
