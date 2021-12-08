@@ -7,18 +7,17 @@ class Mutations::Villages::UpdateVillage < Mutations::BaseMutation
   field :errors, [String], null: true
 
   def resolve(id:, **args)
-    Village.find(id).tap do |event|
-      if event.update!(args)
-        {
-          event: event,
-          errors: []
-        }
-      else
-        {
-          event: nil,
-          error: event.errors.full_messages
-        }
-      end
+    village = Village.find(id)
+    if village.update!(args)
+      {
+        village: village,
+        errors: []
+      }
+    else
+      {
+        village: nil,
+        error: village.errors.full_messages
+      }
     end
   end
 end
