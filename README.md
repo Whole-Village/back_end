@@ -7,9 +7,55 @@
 
 ## GraphQL Queries
 
+### Create an event
+
+ ```
+ mutation {
+  createEvent( 
+    villageId: 23
+    name: "New Year Celebration"
+    description: "Come celebrate with us!"
+    date: "01/01/2022"
+    time: "10:30am"
+    adultRequired: true
+  ) {
+    event {
+      id
+      name
+      description
+      date
+      time
+      adultRequired
+      villageName
+    }
+    errors
+  }
+}
+```
+
+### Update an event partially (pass new data you want to update in the params.  Event Id is required.
+
+ ```
+ mutation {
+   updateEvent(
+     id: <event_id>,
+     name: "<new name"
+   ) {
+     event {
+       id
+       name
+       description
+     }
+     errors
+   }
+ }
+
+ ```
+
 ### Find all events in a village
 
- ```query {
+ ```
+ query {
   events(villageId: <villageId>) {
     name
     description
@@ -21,6 +67,24 @@
 }
 ```
 
+## Find an event by ID.  Event ID is required
+
+```
+query {
+  event(id: <event_id>){
+    name
+    description
+    date
+    time
+    adultRequired
+    villageName
+  }
+}
+```
+
+## JSON Contracts
+
+```
 singular user
 {
   data: {
@@ -83,3 +147,4 @@ singular village
     }    
   }
 }
+```
