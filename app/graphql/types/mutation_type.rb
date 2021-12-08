@@ -7,4 +7,6 @@ class Types::MutationType < Types::BaseObject
 
   field :create_event, mutation: Mutations::Events::CreateEvent
   field :update_event, mutation: Mutations::Events::UpdateEvent
+
+  field :create_child, mutation: Mutations::Children::CreateChild
 end
