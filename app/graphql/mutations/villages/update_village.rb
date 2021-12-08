@@ -1,4 +1,4 @@
-class Mutations::Events::UpdateVillage < Mutations::BaseMutation
+class Mutations::Villages::UpdateVillage < Mutations::BaseMutation
   argument :id, ID, required: true
   argument :name, String, required: false
   argument :description, String, required: false
