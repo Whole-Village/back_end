@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Mutations::CreateUser, type: :request do
+RSpec.describe Mutations::Users::CreateUser, type: :request do
   before :each do
     @user = create(:user)
 
