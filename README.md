@@ -7,6 +7,50 @@
 
 ## GraphQL Queries
 
+### Find user by email address
+
+```
+query {
+  user(email:"<email>"){
+    firstName
+    lastName
+    fullName
+    email
+    phoneNumber
+    address
+    covidVaccinated
+    volunteerCredits
+    villages {
+      id
+      name
+      description
+    } 
+  }
+}
+```
+
+### Find all users
+
+``` 
+query {
+  users{
+    firstName
+    lastName
+    fullName
+    email
+    phoneNumber
+    address
+    covidVaccinated
+    volunteerCredits
+    villages {
+      id
+      name
+      description
+    } 
+  }
+}
+```
+
 ### Create an event
 
  ```
@@ -110,8 +154,8 @@ query {
   volunteer_credits: "0",
   created_at: Tue, 07 Dec 2021 00:16:16.334398000 UTC +00:00,
   updated_at: Tue, 07 Dec 2021 00:16:16.334398000 UTC +00:00>,
+  
  #<User:0x000055f4d9ed2898
- 
   id: 12,
   first_name: "Bobby",
   last_name: "Doodoo",
