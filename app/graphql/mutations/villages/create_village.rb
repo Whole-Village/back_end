@@ -1,4 +1,4 @@
-class Mutations::CreateVillage < Mutations::BaseMutation
+class Mutations::Villages::CreateVillage < Mutations::BaseMutation
   argument :name, String, required: true
   argument :description, String, required:false
 

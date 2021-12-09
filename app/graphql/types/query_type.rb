@@ -6,11 +6,7 @@ class Types::QueryType < Types::BaseObject
 
   field :events, resolver: Queries::Events
   field :event, resolver: Queries::Event
-  field :village, Types::VillageType, null: false do
-    argument :id, ID, required: true
-  end
-
-  def village(id:)
-    Village.find(id)
-  end
+  field :village, resolver: Queries::Village
+  field :children, resolver: Queries::Children
+  field :child, resolver: Queries::Child
 end
