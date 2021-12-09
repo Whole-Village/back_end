@@ -1,6 +1,6 @@
 class Queries::User < Queries::BaseQuery
-  type [Types::UserType], null: false
-  argument :email, String, required: true
+  type Types::UserType, null: false
+    argument :email, String, required: true
     # description: "Fetch single user"
 
   def resolve(email:)

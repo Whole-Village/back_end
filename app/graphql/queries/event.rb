@@ -1,5 +1,5 @@
 class Queries::Event < Queries::BaseQuery
-  type [Types::EventType], null: false
+  type Types::EventType, null: false
     argument :id, ID, required: true
     # argument :village_id, ID, required: true
 
