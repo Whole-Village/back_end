@@ -10,4 +10,6 @@ class Types::MutationType < Types::BaseObject
 
   field :create_child, mutation: Mutations::Children::CreateChild
   field :update_child, mutation: Mutations::Children::UpdateChild
+
+  field :create_village_member, mutation: Mutations::VillageMembers::CreateVillageMember
 end
