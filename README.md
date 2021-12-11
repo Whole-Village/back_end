@@ -7,6 +7,30 @@
 
 ## GraphQL Queries
 
+### Find village by ID (now includes users and events for the village)
+
+``` 
+  query {
+    village(id: <villageId){
+      name
+      description
+      id
+      users {
+        firstName
+        lastName
+        email
+      }
+      events {
+        name
+        description
+        date
+        time 
+        adultRequired
+      }
+    }   
+  }
+```
+
 ### Find user by email address
 
 ```
@@ -121,9 +145,33 @@ query {
     date
     time
     adultRequired
-    villageName
+    villageName  
   }
 }
+```
+
+### Add a member to a village (Create village member)
+
+```
+mutation {
+  createVillageMember(
+    userEmail
+    villageId
+  )
+  {
+    village {
+     name
+     description
+    }
+    user {
+      firstName
+      lastName
+      email
+    }
+    errors
+  }
+}
+
 ```
 
 ## Seed Data
