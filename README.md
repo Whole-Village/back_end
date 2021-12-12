@@ -31,6 +31,29 @@
   }
 ```
 
+### create village (now takes user emails)
+
+```
+mutation {
+  createVillage (
+    name: String
+    description: String
+    userEmails:[String, String, ...] 
+  )
+  {
+    village {
+      name
+      description
+      users {
+        firstName
+        lastName
+        email
+      }
+    }
+  }  
+}
+```
+
 ### Find user by email address
 
 ```
