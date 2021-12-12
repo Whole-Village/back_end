@@ -45,14 +45,14 @@ priya = User.create(first_name: 'Priya',
 andrew = Child.create(
   first_name: 'Andrew',
   last_name: 'Apples',
-  birthdate: '03/06/1998',
+  birthdate: '1998-03-06',
   user_id: priya.id
 )
 
 natalie = Child.create(
   first_name: 'Natalie',
   last_name: 'Nabisco',
-  birthdate: '01/15/2000',
+  birthdate: '2000-01-05',
   user_id: amber.id
 )
 
@@ -98,7 +98,7 @@ vm3 = VillageMember.create(
 
  birthday = Event.create(
   name: 'Andrews birthday bash',
-  date: '03/06/1998',
+  date: '1998-03-06',
   description: 'come throw down for Andrew',
   time: '04:30',
   adult_required: false,
@@ -106,7 +106,7 @@ vm3 = VillageMember.create(
 )
 valentine = Event.create(
   name: "Valentine's",
-  date: '02/14/2022',
+  date: '2022-02-14',
   description: 'come celebrate the big V day with Phil',
   time: '04:30',
   adult_required: false,
@@ -114,7 +114,7 @@ valentine = Event.create(
 )
 carrols = Event.create(
   name: 'Christmas Carrols',
-  date: '12/25/2021',
+  date: '2021-12-25',
   description: 'Spread cheer through the neighborhood',
   time: '04:30',
   adult_required: true,
@@ -122,7 +122,7 @@ carrols = Event.create(
 )
 easter = Event.create(
   name: 'Easter Egg Hunt',
-  date: '04/25/2022',
+  date: '2022-04-25',
   description: 'Lets see who can find the most',
   time: '04:30',
   adult_required: true,
