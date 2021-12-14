@@ -8,7 +8,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Forks][forks-shield]][forks-url] -->
 <!-- ![Build Badge][build-badge] -->
- -->
+
 ## Description 
   
 An app that allows busy parents to create a villagea and add village members to help out with kids activities as well as creating and organizing events--all in one place.
@@ -30,6 +30,8 @@ Isika Powers | Andrew Massey
 [Setup](#setup)
 [Learning Goals](#learning-goals)
 [Database Schema](#database-schema)
+[API Queries](#api-queries)
+[API Mutations](#api-mutations) 
 [Wireframes](#wireframes)
 
 
@@ -138,11 +140,11 @@ Isika Powers | Andrew Massey
 ## Database Schema
 ![Screen Shot 2021-12-06 at 3 38 10 PM](https://user-images.githubusercontent.com/75844153/144918858-dcb64929-7f83-4022-b247-edcaf25240f3.png)
 
-# API Queries
-## Find the queries for Whole Village [here](https://github.com/Whole-Village/back-end/wiki/queries)
+## API Queries
+### Find the queries for Whole Village [here](https://github.com/Whole-Village/back_end/wiki/Queries)
   
-# API Mutations
-## Find the mutations for Whole Village [here](https://github.com/Whole-Village/back-end/wiki/mutations)
+## API Mutations
+### Find the mutations for Whole Village [here](https://github.com/Whole-Village/back_end/wiki/Mutations)
   
 </div>
 
@@ -159,7 +161,7 @@ Isika Powers | Andrew Massey
 [build-badge]: https://img.shields.io/circleci/build/github/Whole-Village/back-end?style=flat-square -->
 
 
-## JSON Contracts
+## Initial JSON Contracts
 
 ```
 singular user
