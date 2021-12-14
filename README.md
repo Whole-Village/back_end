@@ -74,7 +74,7 @@ Isika Powers | Andrew Massey
       ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
       ```
 
-  * [System dependencies](https://github.com/Whole-Village/frontend/blob/main/Gemfile)
+  * [System dependencies](https://github.com/Whole-Village/back_end/blob/main/Gemfile)
       ```bash
       $ rails -v
       Rails 6.1.4
@@ -124,7 +124,8 @@ Isika Powers | Andrew Massey
 
 
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create GraphQL queries and mutations and send them as JSON to the front end to consume<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Use Rails to create a server-side for GraphQL<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement Rails as a server-side for GraphQL<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Set up Cross Origin Resource Sharing (CORS) for the front-end React app to be able to communicate with the server<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create a project with a separate frontend and backend<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Organize and refactor code to be more maintainable<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write model and feature tests that fully cover data logic and both sad and happy paths<br>
