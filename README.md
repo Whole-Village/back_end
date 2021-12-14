@@ -1,201 +1,166 @@
 ## Whole Village Back-End(GraphQL)    [![CircleCI](https://circleci.com/gh/Whole-Village/back_end/tree/main.svg?style=shield)](https://circleci.com/gh/Whole-Village/back_end/tree/main)
 
-## Schema 
+<div align="center">
 
+# [WholeVillage](https://whole-village-be.herokuapp.com/)
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
+![Build Badge][build-badge]
+
+<img src="https://user-images.githubusercontent.com/73204318/141081548-a93d278d-72ef-4532-9db7-46da0d953c3d.png"><br>
+<br>
+
+  An app that allows busy parents to create a villagea and add village members to help out with kids activities as well as creating and organizing events--all in one place.
+
+---
+
+## Contributors
+
+Isika Powers | Andrew Massey
+|--- |--- |
+|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/isikapowers)|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/acmassey3698)|
+|[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/isika/)|[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/andrew-massey3698/)
+
+
+## Table of Contents
+|Links
+|--- |
+[Tools Used](#tools-used)
+[Setup](#setup)
+[Learning Goals](#learning-goals)
+[Database Schema](#database-schema)
+[Wireframes](#wireframes)
+
+
+## Tools Used
+
+|Development|Development|Testing|Deployment
+|--- |--- |--- |--- |
+|[<img src="https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white" />](https://www.ruby-lang.org/en/downloads/)|[<img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[ <img src="https://img.shields.io/badge/rspec-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/rspec/rspec-rails)|[<img src="https://img.shields.io/badge/Heroku-430098.svg?&style=flaste&logo=heroku&logoColor=white" />](http://virtual-watch-party.herokuapp.com)|
+|[ <img src="https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white" />](https://rubygems.org/gems/rails/versions/6.1.4)|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://desktop.github.com/)|[<img src= "https://img.shields.io/badge/ci-circleCI-blue"/>](https://circleci.com/)|
+|[<img src="https://img.shields.io/badge/pry-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/pry/versions/0.10.3)|[<img src="https://img.shields.io/badge/webmock-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/bblimke/webmock)
+|[<img src="https://img.shields.io/badge/sql-postgreSQL-green"/>](https://www.postgresql.org/)|[<img src="https://img.shields.io/badge/-VCR-lightgrey"/>](https://github.com/vcr/vcr)
+|[<img src="https://img.shields.io/badge/-Postico-yellowgreen"/>](https://eggerapps.at/postico/)|[<img src="https://img.shields.io/badge/rubocop-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/rubocop/versions/0.39.0)|[<img src="https://img.shields.io/badge/-FactoryBot-green"/>](https://github.com/thoughtbot/factory_bot)
+|[<img src="https://img.shields.io/badge/Atom-66595C.svg?&style=flaste&logo=atom&logoColor=white" />](https://atom.io/)|[<img src="https://img.shields.io/badge/-Faker-blue"/>](https://github.com/faker-ruby/faker)
+|[<img src="https://img.shields.io/badge/faraday-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/lostisland/faraday)||[<img src="https://img.shields.io/badge/simplecov-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+|[<img src="https://img.shields.io/badge/Postman-FF6E4F.svg?&style=flat&logo=postman&logoColor=white" />](https://www.postman.com/product/rest-client/)|
+
+</div>
+
+<div align="center">
+
+## Setup
+
+</div>
+
+
+  This project requires Ruby 2.7.2.
+
+  * Fork this repository
+  * From the command line, install gems and set up your DB:
+      * `bundle install && bundle update`
+      * `rails db:{create,migrate,seed}`
+  * Run the test suite with `bundle exec rspec -fd`
+  * Run your development server with `rails s` to see the app in action.
+
+#### Project Configurations
+
+  * Ruby version
+      ```bash
+      $ ruby -v
+      ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
+      ```
+
+  * [System dependencies](https://github.com/Whole-Village/frontend/blob/main/Gemfile)
+      ```bash
+      $ rails -v
+      Rails 6.1.4
+      ```
+
+  * Database creation
+      ```bash
+      $ rails db:{drop,create,migrate,seed}
+      Created database 'back-end_development'
+      Created database 'back-end_test'
+      ```
+
+      ```bash
+      $ bundle install
+      ```
+
+  * How to run the test suite
+      ```bash
+      $ bundle exec rspec -fd
+      ```
+
+  * [Local Deployment](http://localhost:3000), for testing
+      ```bash
+      $ rails s
+      => Booting Puma
+      => Rails 6.1.4.1 application starting in development 
+      => Run `bin/rails server --help` for more startup options
+      Puma starting in single mode...
+      * Puma version: 5.5.2 (ruby 3.0.1-p64) ("Zawgyi")
+      *  Min threads: 5
+      *  Max threads: 5
+      *  Environment: development
+      *          PID: 7573
+      * Listening on http://127.0.0.1:3000
+      * Listening on http://[::1]:3000
+      Use Ctrl-C to stop
+      ```
+
+  * [Heroku Deployment](https://whole-village-be.herokuapp.com/), for production (Note: Since it's GraphQL, no content shows on the page)
+
+
+<div align="center">
+
+## Learning Goals
+
+</div>
+
+
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create GraphQL queries and mutations and send them as JSON to the front end to consume<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Use Rails to create a server-side for GraphQL<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create a project with a separate frontend and backend<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Organize and refactor code to be more maintainable<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write model and feature tests that fully cover data logic and both sad and happy paths<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration via CircleCI<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Deploy to Heroku<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement project management by using project boards, participating in daily stand-ups and retros<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write thorough, understandable documentation<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply RuboCop’s style guide for code quality<br>
+
+<div align="center">
+
+## Database Schema
 ![Screen Shot 2021-12-06 at 3 38 10 PM](https://user-images.githubusercontent.com/75844153/144918858-dcb64929-7f83-4022-b247-edcaf25240f3.png)
 
+# API Queries
+## Find the queries for Whole Village [here](https://github.com/Whole-Village/back-end/wiki/queries)
+  
+# API Mutations
+## Find the mutations for Whole Village [here](https://github.com/Whole-Village/back-end/wiki/mutations)
+  
+</div>
 
-## GraphQL Queries
+<!-- MARKDOWN LINKS & IMAGES -->
 
-### Find village by ID (now includes users and events for the village)
+[contributors-shield]: https://img.shields.io/github/contributors/Whole-Village/back-end.svg?style=flat-square
+[contributors-url]: https://github.com/Whole-Village/back-end/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Whole-Village/back-end.svg?style=flat-square
+[forks-url]: https://github.com/Whole-Village/back-end/network/members
+[stars-shield]: https://img.shields.io/github/stars/Whole-Village/back-end.svg?style=flat-square
+[stars-url]: https://github.com/Whole-Village/back-end/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Whole-Village/back-end.svg?style=flat-square
+[issues-url]: https://github.com/Whole-Village/back-end/issues
+[build-badge]: https://img.shields.io/circleci/build/github/Whole-Village/back-end?style=flat-square
 
-``` 
-  query {
-    village(id: <villageId){
-      name
-      description
-      id
-      users {
-        firstName
-        lastName
-        email
-      }
-      events {
-        name
-        description
-        date
-        time 
-        adultRequired
-      }
-    }   
-  }
-```
 
-### create village (now takes user emails)
 
-```
-mutation {
-  createVillage (
-    name: String
-    description: String
-    userEmails:[String, String, ...] 
-  )
-  {
-    village {
-      name
-      description
-      users {
-        firstName
-        lastName
-        email
-      }
-    }
-  }  
-}
-```
-
-### Find user by email address
-
-```
-query {
-  user(email:"<email>"){
-    firstName
-    lastName
-    fullName
-    email
-    phoneNumber
-    address
-    covidVaccinated
-    volunteerCredits
-    villages {
-      id
-      name
-      description
-    } 
-  }
-}
-```
-
-### Find all users
-
-``` 
-query {
-  users{
-    firstName
-    lastName
-    fullName
-    email
-    phoneNumber
-    address
-    covidVaccinated
-    volunteerCredits
-    villages {
-      id
-      name
-      description
-    } 
-  }
-}
-```
-
-### Create an event
-
- ```
- mutation {
-  createEvent( 
-    villageId: 23
-    name: "New Year Celebration"
-    description: "Come celebrate with us!"
-    date: "01/01/2022"
-    time: "10:30am"
-    adultRequired: true
-  ) {
-    event {
-      id
-      name
-      description
-      date
-      time
-      adultRequired
-      villageName
-    }
-    errors
-  }
-}
-```
-
-### Update an event partially (pass new data you want to update in the params.  Event Id is required.
-
- ```
- mutation {
-   updateEvent(
-     id: <event_id>,
-     name: "<new name"
-   ) {
-     event {
-       id
-       name
-       description
-     }
-     errors
-   }
- }
-
- ```
-
-### Find all events in a village
-
- ```
- query {
-  events(villageId: <villageId>) {
-    name
-    description
-    date
-    time
-    adultRequired
-    villageName
-  }
-}
-```
-
-## Find an event by ID.  Event ID is required
-
-```
-query {
-  event(id: <event_id>){
-    name
-    description
-    date
-    time
-    adultRequired
-    villageName  
-  }
-}
-```
-
-### Add a member to a village (Create village member)
-
-```
-mutation {
-  createVillageMember(
-    userEmail
-    villageId
-  )
-  {
-    village {
-     name
-     description
-    }
-    user {
-      firstName
-      lastName
-      email
-    }
-    errors
-  }
-}
-
-```
 
 ## Seed Data
 
