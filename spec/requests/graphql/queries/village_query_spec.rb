@@ -25,7 +25,7 @@ RSpec.describe 'query for one village by ID' do
     it 'returns an error when there is a nil value submitted for the village_id' do
       result = BackEndSchema.execute(query(village_id: nil)).as_json
       expect(result["errors"].first["message"]).to eq("Village does not exist.")
-    end 
+    end
   end
 
   def query(village_id:)
