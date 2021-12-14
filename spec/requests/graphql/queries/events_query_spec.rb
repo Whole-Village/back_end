@@ -28,7 +28,7 @@ RSpec.describe 'query for all events in a village' do
       it 'returns an error when there isnt a village matching the id given' do
         result = BackEndSchema.execute(query(village_id: "1")).as_json
 
-        expect(result["errrors"].first["message"]).to eq("Village does not exist")
+        expect(result["errors"].first["message"]).to eq("village does not exist.")
       end
     end
   end
