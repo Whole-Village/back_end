@@ -32,7 +32,8 @@ Isika Powers | Andrew Massey
 [Database Schema](#database-schema)
 [API Queries](#api-queries)
 [API Mutations](#api-mutations) 
-[Wireframes](#wireframes)
+[Initial JSON Contracts](#initial-json-contracts)
+<!-- [Wireframes](#wireframes) -->
 
 
 ## Tools Used
