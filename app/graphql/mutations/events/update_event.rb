@@ -16,18 +16,22 @@ class Mutations::Events::UpdateEvent < Mutations::BaseMutation
   end
 
   def resolve(id:, **args)
-    Event.find(id).tap do |event|
-      if event.update!(args)
-        {
-          event: event,
-          errors: []
-        }
-      else
-        {
-          event: nil,
-          error: event.errors.full_messages
-        }
-      end
+    event = Event.find(id)
+    if event.update!(args)
+      {
+        event: event,
+        errors: []
+      }
+    else
+      {
+        event: nil,
+        error: event.errors.full_messages
+      }
     end
+    rescue ActiveRecord::RecordNotFound => _e
+      GraphQL::ExecutionError.new('Event does not exist.')
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid attribute(s) for #{e.record.class}:"\
+    " #{e.record.errors.full_messages.join(', ')}")
   end
 end

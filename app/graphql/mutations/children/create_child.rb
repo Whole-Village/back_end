@@ -14,7 +14,8 @@ class Mutations::Children::CreateChild < ::Mutations::BaseMutation
   end
 
   def resolve(user_id:, **args)
-    child = User.find(user_id).children.new(args)
+    user = User.find(user_id)
+    child = user.children.new(args)
     if child.save
       {
         child: child,
@@ -26,5 +27,10 @@ class Mutations::Children::CreateChild < ::Mutations::BaseMutation
         errors: child.errors.full_messages
       }
     end
+  rescue ActiveRecord::RecordNotFound => _e
+    GraphQL::ExecutionError.new('User does not exist.')
+  rescue ActiveRecord::RecordInvalid => e
+    GraphQL::ExecutionError.new("Invalid attribute(s) for #{e.record.class}:"\
+    " #{e.record.errors.full_messages.join(', ')}")
   end
 end
