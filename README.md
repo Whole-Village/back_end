@@ -32,7 +32,7 @@ Isika Powers | Andrew Massey
 [Database Schema](#database-schema)
 [API Queries](#api-queries)
 [API Mutations](#api-mutations) 
-[Initial JSON Contracts](#initial-json-contracts)
+
 <!-- [Wireframes](#wireframes) -->
 
 
@@ -64,7 +64,7 @@ Isika Powers | Andrew Massey
   * From the command line, install gems and set up your DB:
       * `bundle install && bundle update`
       * `rails db:{create,migrate,seed}`
-  * Run the test suite with `bundle exec rspec -fd`
+  * Run the test suite with `bundle exec rspec`
   * Run your development server with `rails s` to see the app in action.
 
 #### Project Configurations
