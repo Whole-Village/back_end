@@ -28,5 +28,10 @@ class Mutations::Events::CreateEvent < ::Mutations::BaseMutation
         errors: event.errors.full_messages
       }
     end
+    rescue ActiveRecord::RecordNotFound => _e
+      GraphQL::ExecutionError.new('Village does not exist.')
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid attribute(s) for #{e.record.class}:"\
+      " #{e.record.errors.full_messages.join(', ')}")
   end
 end
