@@ -26,5 +26,10 @@ class Mutations::Children::UpdateChild < Mutations::BaseMutation
         errors: child.errors.full_messages
       }
     end
+    rescue ActiveRecord::RecordNotFound => _e
+      GraphQL::ExecutionError.new('Child does not exist.')
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid attribute(s) for #{e.record.class}:"\
+      " #{e.record.errors.full_messages.join(', ')}")
   end
 end
