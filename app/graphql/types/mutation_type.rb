@@ -1,6 +1,6 @@
 class Types::MutationType < Types::BaseObject
-  # field :create_user, mutation: Mutations::Users::CreateUser
-  # field :update_user, mutation: Mutations::Users::UpdateUser
+  field :create_user, mutation: Mutations::Users::CreateUser
+  field :update_user, mutation: Mutations::Users::UpdateUser
 
   field :create_village, mutation: Mutations::Villages::CreateVillage
   field :update_village, mutation: Mutations::Villages::UpdateVillage
