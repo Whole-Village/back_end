@@ -12,9 +12,9 @@ Event.destroy_all
 Village.destroy_all
 
 
-donna =  User.create(first_name: 'Donna',
-              last_name: 'Doodoo',
-              email: 'donna@gmail.com',
+nadia =  User.create(first_name: 'Nadia',
+              last_name: 'Naji',
+              email: 'nadia@turing.edu',
               password: 'password',
               phone_number: '123-456-7777',
               address: '123 Main St Denver, CO 34552',
@@ -22,9 +22,9 @@ donna =  User.create(first_name: 'Donna',
               volunteer_credits: 0
                )
 
-amber = User.create(first_name: 'Amber',
-              last_name: 'Apollo',
-              email: 'amber@gmail.com',
+anna = User.create(first_name: 'Anna',
+              last_name: 'Johnson',
+              email: 'anna@turing.edu',
               password: 'password',
               phone_number: '123-456-8888',
               address: '456 Main St Denver, CO 34552',
@@ -32,9 +32,9 @@ amber = User.create(first_name: 'Amber',
               volunteer_credits: 0
                )
 
-priya = User.create(first_name: 'Priya',
-             last_name: 'Poopoo',
-             email: 'priya@gmail.com',
+phil = User.create(first_name: 'Phil',
+             last_name: 'Than',
+             email: 'phil@turing.edu',
              password: 'password',
              phone_number: '123-635-7382',
              address: '973 Main St Denver, CO 34552',
@@ -44,73 +44,80 @@ priya = User.create(first_name: 'Priya',
 
 andrew = Child.create(
   first_name: 'Andrew',
-  last_name: 'Apples',
+  last_name: 'Than',
   birthdate: '1998-03-06',
-  user_id: priya.id
+  user_id: phil.id
 )
 
-natalie = Child.create(
-  first_name: 'Natalie',
-  last_name: 'Nabisco',
+isika = Child.create(
+  first_name: 'Isika',
+  last_name: 'Naji',
   birthdate: '2000-01-05',
-  user_id: amber.id
+  user_id: nadia.id
 )
 
-village1 = Village.create(
+jun = Child.create(
+  first_name: 'Jun',
+  last_name: 'Johnson',
+  birthdate: '2000-01-05',
+  user_id: anna.id
+)
+
+soccer_team = Village.create(
   name: 'Soccer team',
   description: 'Elementary school team for kids under eight. Coached by Ed Edwards'
 )
 
-village2 = Village.create(
-  name: 'Ms. Stewart 3rd Grade class',
-  description: 'All students taught by Ms. Stewart at Main St. Elementary'
+turing= Village.create(
+  name: 'Turing',
+  description: 'Group of turing students both backend and frontend'
 )
 
-village3 = Village.create(
-  name: 'Selwyn Village Neighborhood Kids',
-  description: 'Group for all children living in Selwyn Village Neighborhood'
+bad_moms = Village.create(
+  name: 'Bad Moms',
+  description: 'Bad mom group--yes, just like in the movie'
 )
 
 vm1 = VillageMember.create(
-  village: village1,
-  user: priya
+  village: soccer_team ,
+  user: phil
 )
 
 vm2 = VillageMember.create(
-  village: village1,
-  user: amber
+  village: soccer_team ,
+  user: anna
 )
 
 vm3 = VillageMember.create(
-  village: village2,
-  user: priya
+  village: turing,
+  user: nadia
 )
 
 vm3 = VillageMember.create(
-  village: village3,
-  user: priya
+  village: turing,
+  user: anna
 )
 
 vm3 = VillageMember.create(
-  village: village3,
-  user: priya
+  village: bad_moms,
+  user: nadia
 )
 
  birthday = Event.create(
   name: 'Andrews birthday bash',
-  date: '1998-03-06',
+  date: '2012-03-06',
   description: 'come throw down for Andrew',
   time: '04:30',
   adult_required: false,
-  village: village1
+  village: soccer_team
 )
 valentine = Event.create(
   name: "Valentine's",
   date: '2022-02-14',
-  description: 'come celebrate the big V day with Phil',
-  time: '04:30',
+  description: 'Come create an app that makes people fall in love with you!',
+  time: '04:00',
   adult_required: false,
-  village: village2
+  village: turing
 )
 carrols = Event.create(
   name: 'Christmas Carrols',
@@ -118,13 +125,13 @@ carrols = Event.create(
   description: 'Spread cheer through the neighborhood',
   time: '04:30',
   adult_required: true,
-  village: village3
+  village: bad_moms
 )
-easter = Event.create(
-  name: 'Easter Egg Hunt',
-  date: '2022-04-25',
-  description: 'Lets see who can find the most',
-  time: '04:30',
+graduation = Event.create(
+  name: 'Graduation',
+  date: '2022-01-25',
+  description: 'Turing students are graduating--time flys!',
+  time: '02:30',
   adult_required: true,
-  village: village2
+  village: turing
 )
