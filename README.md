@@ -16,11 +16,20 @@ An app that allows busy parents to create a villagea and add village members to 
 ---
 
 ## Contributors
-
-Isika Powers | Andrew Massey
+  
+### Back-End
+  
+Isika Powers | Andrew Massey 
 |--- |--- |
 |[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/isikapowers)|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/acmassey3698)|
 |[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/isika/)|[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/andrew-massey3698/)
+  
+### Front-End
+  
+Anna Johnson | Nadia Naji | Phil Than
+| --- | --- | --- |
+|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/annnuuuh)|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/najinl)| [<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://github.com/pthan1)|
+|[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/aesprague/)|[<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/n-naji/) | [<img src= "https://img.shields.io/badge/in-LinkedIn-blue" />](https://www.linkedin.com/in/philongthan/)    
 
 
 ## Table of Contents
